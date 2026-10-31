@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#0b3b35">
-    <meta name="description" content="PESAT - Ruang tumbuh siswa SMA Plus PGRI Cibinong">
 
-    <title>PESAT | Ruang Tumbuh Siswa</title>
+    <meta name="theme-color" content="#073d32">
+    <meta name="description" content="PESAT - Ruang tumbuh, belajar, dan berkembang bersama SMA Plus PGRI Cibinong.">
+
+    <title>PESAT | SMA Plus PGRI Cibinong</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -20,47 +21,55 @@
 
     <!-- ANNOUNCEMENT -->
     <div class="announcement">
-        <span class="dot"></span>
-        Belajar, bertumbuh, dan berprestasi bersama
+        <span class="announcement-dot"></span>
+        Belajar, bertumbuh, dan berprestasi bersama PESAT
     </div>
 
     <!-- NAVBAR -->
     <header class="header">
+
         <nav class="navbar container">
 
             <a href="#home" class="brand">
-                <img src="images/logo/pesat.jpg" alt="Logo PESAT">
 
-                <span>
+                <img src="./logo/pesat.jpg" alt="Logo PESAT">
+
+                <div class="brand-text">
                     <strong>PESAT</strong>
                     <small>SMA PLUS PGRI CIBINONG</small>
-                </span>
+                </div>
+
             </a>
 
-            <button
-                class="menu-toggle"
-                id="menuToggle"
-                aria-label="Buka menu"
-                aria-expanded="false"
-            >
+            <button class="menu-toggle" id="menuToggle"
+                aria-label="Buka navigasi"
+                aria-expanded="false">
+
                 <span></span>
                 <span></span>
                 <span></span>
+
             </button>
 
-            <div class="nav-links" id="navLinks">
+            <div class="nav-menu" id="navMenu">
+
                 <a href="#home" class="nav-link active">Beranda</a>
                 <a href="#tentang" class="nav-link">Tentang</a>
+                <a href="#program" class="nav-link">Program</a>
                 <a href="#studentday" class="nav-link">Studentday</a>
                 <a href="#kopasus" class="nav-link">Kopasus IT</a>
+                <a href="#kontak" class="nav-link">Kontak</a>
 
-                <a href="#program" class="nav-button">
+                <a href="#program" class="nav-cta">
                     Jelajahi PESAT <span>↗</span>
                 </a>
+
             </div>
 
         </nav>
+
     </header>
+
 
     <main>
 
@@ -75,83 +84,89 @@
                 </div>
 
                 <h1>
-                    Temukan potensimu.
+                    Temukan
+                    potensimu.
                     <span>Tumbuh lebih jauh.</span>
                 </h1>
 
                 <p class="hero-description">
-                    Ruang untuk belajar, mencoba hal baru, dan
-                    membangun keterampilan yang relevan dengan masa depan.
+                    Ruang untuk belajar, mencoba hal baru, dan membangun
+                    keterampilan yang relevan dengan masa depan.
                 </p>
 
-                <div class="hero-actions">
+                <div class="hero-buttons">
 
                     <a href="#program" class="button-primary">
-                        Jelajahi program <span>↗</span>
+                        Jelajahi program
+                        <span>↗</span>
                     </a>
 
-                    <a href="#tentang" class="text-link">
-                        Tentang PESAT →
+                    <a href="#tentang" class="button-secondary">
+                        Tentang PESAT
+                        <span>→</span>
                     </a>
 
                 </div>
 
-                <div class="hero-note">
+                <div class="hero-bottom">
 
-                    <div class="note-icon">✦</div>
+                    <div class="hero-mini-icon">✦</div>
 
                     <div>
                         <strong>Belajar dengan makna</strong>
-
-                        <p>
-                            Akademik dan pengembangan diri berjalan bersama.
-                        </p>
+                        <p>Akademik dan pengembangan diri berjalan bersama.</p>
                     </div>
 
                 </div>
 
             </div>
 
-            <!-- ILUSTRASI HERO -->
+
+            <!-- HERO VISUAL TANPA GAMBAR TAMBAHAN -->
             <div class="hero-visual">
 
-                <div class="visual-card">
+                <div class="visual-decoration decoration-one"></div>
+                <div class="visual-decoration decoration-two"></div>
 
-                    <div class="visual-header">
+                <div class="visual-main">
+
+                    <div class="visual-top">
                         <span>PESAT EXPERIENCE</span>
                         <span>✳</span>
                     </div>
 
-                    <div class="illustration">
-                        <div class="sun"></div>
-                        <div class="orbit"></div>
+                    <div class="visual-center">
 
-                        <div class="arch">
-                            <div class="arch-inner"></div>
+                        <div class="visual-circle circle-back"></div>
+
+                        <div class="visual-circle circle-middle"></div>
+
+                        <div class="visual-circle circle-front">
+                            <img src="./logo/pesat.jpg" alt="Logo PESAT">
                         </div>
 
-                        <div class="book book-one"></div>
-                        <div class="book book-two"></div>
+                        <div class="visual-star star-one">✦</div>
+                        <div class="visual-star star-two">✳</div>
 
-                        <div class="plant">✦</div>
                     </div>
 
-                    <div class="visual-caption">
+                    <div class="visual-bottom">
 
                         <div>
-                            <strong>Ruang untuk berkembang</strong>
-                            <p>Explore · Create · Connect</p>
+                            <strong>Explore Your Potential</strong>
+                            <p>Learn · Create · Inspire</p>
                         </div>
 
-                        <div class="round-arrow">↗</div>
+                        <div class="visual-arrow">↗</div>
 
                     </div>
 
                 </div>
 
-                <div class="floating-card floating-top">
 
-                    <span class="floating-icon">✦</span>
+                <div class="floating-card floating-one">
+
+                    <div class="floating-icon orange">✦</div>
 
                     <div>
                         <strong>Explore</strong>
@@ -160,13 +175,14 @@
 
                 </div>
 
-                <div class="floating-card floating-bottom">
 
-                    <span class="floating-icon green-icon">↗</span>
+                <div class="floating-card floating-two">
+
+                    <div class="floating-icon green">↗</div>
 
                     <div>
-                        <strong>Level up</strong>
-                        <small>Bangun kemampuan baru</small>
+                        <strong>Berkembang</strong>
+                        <small>Bangun keterampilan</small>
                     </div>
 
                 </div>
@@ -175,96 +191,166 @@
 
         </section>
 
-        <!-- TENTANG PESAT -->
-        <section class="about container" id="tentang">
 
-            <div>
-                <span class="section-label">TENTANG KAMI</span>
+        <!-- FEATURE STRIP -->
+        <section class="features container">
 
-                <h2>
-                    Lebih dari sekadar<br>
-                    tempat belajar.
-                </h2>
-            </div>
+            <a href="#tentang" class="feature-card">
 
-            <p class="about-description">
-                PESAT menjadi ruang bagi siswa untuk mengenali potensi,
-                mengembangkan kreativitas, berkolaborasi, dan mempersiapkan
-                diri menghadapi tantangan masa depan.
-            </p>
-
-            <div class="about-highlight">
-
-                <span>01</span>
+                <div class="feature-icon icon-green">▤</div>
 
                 <div>
-                    <strong>Berani mencoba</strong>
+                    <strong>Belajar Bermakna</strong>
+                    <p>Akademik dan pengembangan diri.</p>
+                </div>
+
+                <span class="feature-arrow">↗</span>
+
+            </a>
+
+
+            <a href="#studentday" class="feature-card">
+
+                <div class="feature-icon icon-orange">✧</div>
+
+                <div>
+                    <strong>Kenali Kegiatan</strong>
+                    <p>Temukan minat dan bakatmu.</p>
+                </div>
+
+                <span class="feature-arrow">↗</span>
+
+            </a>
+
+
+            <a href="#program" class="feature-card">
+
+                <div class="feature-icon icon-blue">◉</div>
+
+                <div>
+                    <strong>Ruang Berkembang</strong>
+                    <p>Explore · Create · Connect.</p>
+                </div>
+
+                <span class="feature-arrow">↗</span>
+
+            </a>
+
+
+            <a href="#kopasus" class="feature-card">
+
+                <div class="feature-icon icon-purple">✦</div>
+
+                <div>
+                    <strong>Teknologi Digital</strong>
+                    <p>Siap menghadapi masa depan.</p>
+                </div>
+
+                <span class="feature-arrow">↗</span>
+
+            </a>
+
+        </section>
+
+
+        <!-- ABOUT -->
+        <section class="about section-padding" id="tentang">
+
+            <div class="container about-grid">
+
+                <div class="about-heading">
+
+                    <span class="section-label">01 — TENTANG PESAT</span>
+
+                    <h2>
+                        Setiap potensi
+                        punya ruang
+                        untuk <span>bertumbuh.</span>
+                    </h2>
+
+                </div>
+
+                <div class="about-content">
 
                     <p>
-                        Setiap pengalaman adalah kesempatan untuk tumbuh.
+                        PESAT merupakan ruang bagi siswa untuk mengenali
+                        potensi, mengembangkan kreativitas, membangun
+                        keterampilan, dan mempersiapkan diri menghadapi
+                        tantangan masa depan.
                     </p>
+
+                    <p>
+                        Melalui pengalaman belajar dan berbagai kegiatan,
+                        setiap siswa memiliki kesempatan untuk terus
+                        berkembang dan memberikan kontribusi positif.
+                    </p>
+
+                    <a href="#program" class="text-link">
+                        Kenali program kami <span>→</span>
+                    </a>
+
                 </div>
 
             </div>
 
         </section>
 
+
         <!-- PROGRAM -->
-        <section class="program-section" id="program">
+        <section class="program-section section-padding" id="program">
 
             <div class="container">
 
                 <div class="section-heading">
 
                     <div>
-                        <span class="section-label">PENGALAMAN SISWA</span>
 
-                        <h2>
-                            Belajar dengan cara<br>
-                            yang lebih bermakna.
-                        </h2>
+                        <span class="section-label">02 — PROGRAM PESAT</span>
+
+                        <h2>Program untuk Masa Depan</h2>
+
                     </div>
 
                     <p>
-                        Temukan kegiatan yang membantumu mengeksplorasi
-                        minat dan mengasah kemampuan.
+                        Berbagai kegiatan untuk mendukung minat,
+                        bakat, dan keterampilan siswa.
                     </p>
 
                 </div>
+
 
                 <div class="program-grid">
 
                     <!-- STUDENTDAY -->
                     <article class="program-card" id="studentday">
 
-                        <div class="card-art art-student">
+                        <div class="program-art art-one">
 
-                            <div class="art-sun"></div>
-                            <div class="art-shape shape-one"></div>
-                            <div class="art-shape shape-two"></div>
+                            <span class="art-number">01</span>
 
-                            <span class="art-label">
-                                01 / DISCOVER
-                            </span>
+                            <div class="art-symbol">
+                                <span>✦</span>
+                            </div>
+
+                            <span class="art-category">DISCOVER</span>
 
                         </div>
 
-                        <div class="card-body">
+                        <div class="program-body">
 
-                            <div class="card-meta">
+                            <span class="program-type">
                                 KEGIATAN SISWA
-                                <span>↗</span>
-                            </div>
+                            </span>
 
                             <h3>Studentday</h3>
 
                             <p>
                                 Wadah untuk mengenali minat, mengembangkan
-                                bakat, dan belajar melalui kegiatan yang
-                                menyenangkan.
+                                bakat, dan memperoleh pengalaman baru
+                                melalui kegiatan siswa.
                             </p>
 
-                            <a href="#kontak" class="card-link">
+                            <a href="#kontak" class="program-link">
                                 Kenali kegiatannya <span>→</span>
                             </a>
 
@@ -272,40 +358,37 @@
 
                     </article>
 
+
                     <!-- KOPASUS IT -->
                     <article class="program-card" id="kopasus">
 
-                        <div class="card-art art-tech">
+                        <div class="program-art art-two">
 
-                            <div class="tech-orbit orbit-one"></div>
-                            <div class="tech-orbit orbit-two"></div>
+                            <span class="art-number">02</span>
 
-                            <div class="tech-core">
+                            <div class="code-symbol">
                                 &lt;/&gt;
                             </div>
 
-                            <span class="art-label">
-                                02 / CREATE
-                            </span>
+                            <span class="art-category">INNOVATE</span>
 
                         </div>
 
-                        <div class="card-body">
+                        <div class="program-body">
 
-                            <div class="card-meta">
+                            <span class="program-type">
                                 TEKNOLOGI DIGITAL
-                                <span>↗</span>
-                            </div>
+                            </span>
 
                             <h3>Kopasus IT</h3>
 
                             <p>
                                 Ruang untuk mengeksplorasi teknologi,
-                                kreativitas digital, dan keterampilan
-                                memecahkan masalah.
+                                kreativitas digital, dan kemampuan
+                                berpikir kreatif.
                             </p>
 
-                            <a href="#kontak" class="card-link">
+                            <a href="#kontak" class="program-link">
                                 Jelajahi teknologi <span>→</span>
                             </a>
 
@@ -313,37 +396,40 @@
 
                     </article>
 
-                    <!-- KOLABORASI -->
+
+                    <!-- COLLABORATION -->
                     <article class="program-card">
 
-                        <div class="card-art art-community">
+                        <div class="program-art art-three">
 
-                            <div class="community-circle circle-one"></div>
-                            <div class="community-circle circle-two"></div>
-                            <div class="community-circle circle-three"></div>
+                            <span class="art-number">03</span>
 
-                            <span class="art-label">
-                                03 / CONNECT
-                            </span>
+                            <div class="people-symbol">
+                                <span>●</span>
+                                <span>●</span>
+                                <span>●</span>
+                            </div>
+
+                            <span class="art-category">CONNECT</span>
 
                         </div>
 
-                        <div class="card-body">
+                        <div class="program-body">
 
-                            <div class="card-meta">
-                                KOLABORASI
-                                <span>↗</span>
-                            </div>
+                            <span class="program-type">
+                                PENGEMBANGAN DIRI
+                            </span>
 
                             <h3>Tumbuh Bersama</h3>
 
                             <p>
-                                Belajar menghargai ide, berbagi peran,
-                                dan menciptakan dampak positif bersama teman.
+                                Membangun kerja sama, menghargai ide,
+                                dan menciptakan pengalaman positif
+                                bersama lingkungan sekolah.
                             </p>
 
-                            <a href="#kontak" class="card-link">
-                                Lihat nilai kami <span>→</span>
+                            <a href="#kontak" class="program-link">
+                                Pelajari lebih lanjut <span>→</span>
                             </a>
 
                         </div>
@@ -356,10 +442,60 @@
 
         </section>
 
-        <!-- PENUTUP -->
-        <section class="closing container" id="kontak">
 
-            <div class="quote-mark">“</div>
+        <!-- VALUES -->
+        <section class="values section-padding">
+
+            <div class="container">
+
+                <div class="values-heading">
+
+                    <span class="section-label">03 — NILAI PESAT</span>
+
+                    <h2>
+                        Tumbuh bukan hanya tentang
+                        <span>menjadi lebih baik,</span>
+                        tetapi juga memberi arti.
+                    </h2>
+
+                </div>
+
+
+                <div class="values-grid">
+
+                    <div class="value-item">
+                        <span>01</span>
+                        <h3>Explore</h3>
+                        <p>Berani mengenali dan mencoba hal baru.</p>
+                    </div>
+
+                    <div class="value-item">
+                        <span>02</span>
+                        <h3>Create</h3>
+                        <p>Mengembangkan ide menjadi karya bermakna.</p>
+                    </div>
+
+                    <div class="value-item">
+                        <span>03</span>
+                        <h3>Connect</h3>
+                        <p>Membangun hubungan dan kolaborasi positif.</p>
+                    </div>
+
+                    <div class="value-item">
+                        <span>04</span>
+                        <h3>Grow</h3>
+                        <p>Terus belajar dan berkembang setiap hari.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CLOSING -->
+        <section class="closing container" id="kontak">
 
             <div class="closing-content">
 
@@ -373,33 +509,40 @@
                 </h2>
 
                 <p>
-                    Mulai dari rasa ingin tahu, lanjutkan dengan keberanian
-                    untuk mencoba.
+                    Mulai dari rasa ingin tahu, lanjutkan dengan
+                    keberanian untuk mencoba.
                 </p>
+
+                <a href="#home" class="closing-button">
+                    Kembali ke atas ↑
+                </a>
 
             </div>
 
-            <a href="#home" class="button-light">
-                Kembali ke atas ↑
-            </a>
+            <div class="closing-decoration">
+                <span>✳</span>
+                <div></div>
+                <small>PESAT</small>
+            </div>
 
         </section>
 
     </main>
 
+
     <!-- FOOTER -->
     <footer class="footer">
 
-        <div class="container footer-content">
+        <div class="container footer-main">
 
             <a href="#home" class="brand footer-brand">
 
-                <img src="./images/" alt="Logo PESAT">
+                <img src="./logo/pesat.jpg" alt="Logo PESAT">
 
-                <span>
+                <div class="brand-text">
                     <strong>PESAT</strong>
                     <small>SMA PLUS PGRI CIBINONG</small>
-                </span>
+                </div>
 
             </a>
 
@@ -414,6 +557,7 @@
         </div>
 
     </footer>
+
 
     <script src="script.js"></script>
 

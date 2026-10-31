@@ -1,16 +1,18 @@
 // =====================================
-// PESAT - INTERACTIVE JAVASCRIPT
+// PESAT — WEBSITE INTERACTION
 // =====================================
 
 
-// 1. MENU NAVIGASI HP
+// 1. MOBILE NAVIGATION
 
 const menuToggle = document.getElementById("menuToggle");
-const navLinks = document.getElementById("navLinks");
+const navMenu = document.getElementById("navMenu");
 
 menuToggle.addEventListener("click", function () {
 
-    const isOpen = navLinks.classList.toggle("open");
+    const isOpen = navMenu.classList.toggle("open");
+
+    menuToggle.classList.toggle("active", isOpen);
 
     menuToggle.setAttribute(
         "aria-expanded",
@@ -19,20 +21,21 @@ menuToggle.addEventListener("click", function () {
 
     menuToggle.setAttribute(
         "aria-label",
-        isOpen ? "Tutup menu" : "Buka menu"
+        isOpen ? "Tutup navigasi" : "Buka navigasi"
     );
 
 });
 
 
-// 2. TUTUP MENU SETELAH TAUTAN DIPILIH
+// 2. CLOSE MENU WHEN LINK IS CLICKED
 
-document.querySelectorAll(".nav-link, .nav-button").forEach(
+document.querySelectorAll(".nav-link, .nav-cta").forEach(
     function (link) {
 
         link.addEventListener("click", function () {
 
-            navLinks.classList.remove("open");
+            navMenu.classList.remove("open");
+            menuToggle.classList.remove("active");
 
             menuToggle.setAttribute(
                 "aria-expanded",
@@ -41,7 +44,7 @@ document.querySelectorAll(".nav-link, .nav-button").forEach(
 
             menuToggle.setAttribute(
                 "aria-label",
-                "Buka menu"
+                "Buka navigasi"
             );
 
         });
@@ -50,55 +53,125 @@ document.querySelectorAll(".nav-link, .nav-button").forEach(
 );
 
 
-// 3. TAHUN OTOMATIS DI FOOTER
+// 3. AUTOMATIC FOOTER YEAR
 
-document.getElementById("year").textContent =
-    new Date().getFullYear();
+const yearElement = document.getElementById("year");
+
+yearElement.textContent = new Date().getFullYear();
 
 
-// 4. NAVIGASI AKTIF SESUAI BAGIAN YANG DIBUKA
+// 4. ACTIVE NAVIGATION
 
 const sections = document.querySelectorAll(
     "main section[id], article[id]"
 );
 
-const links = document.querySelectorAll(".nav-link");
+const navLinks = document.querySelectorAll(".nav-link");
 
-const observer = new IntersectionObserver(
+const sectionObserver = new IntersectionObserver(
 
     function (entries) {
 
         entries.forEach(function (entry) {
 
-            if (entry.isIntersecting) {
+            if (!entry.isIntersecting) return;
 
-                links.forEach(function (link) {
+            navLinks.forEach(function (link) {
 
-                    link.classList.toggle(
-                        "active",
-                        link.getAttribute("href") ===
-                        "#" + entry.target.id
-                    );
+                const target = link.getAttribute("href");
 
-                });
+                link.classList.toggle(
+                    "active",
+                    target === "#" + entry.target.id
+                );
 
-            }
+            });
 
         });
 
     },
 
     {
-        rootMargin: "-35% 0px -55% 0px"
+        rootMargin: "-30% 0px -60% 0px",
+        threshold: 0
     }
 
 );
 
-
-// Jalankan pengamatan pada setiap bagian halaman
-
 sections.forEach(function (section) {
 
-    observer.observe(section);
+    sectionObserver.observe(section);
 
 });
+
+
+// 5. CLOSE MOBILE MENU WHEN CLICKING OUTSIDE
+
+document.addEventListener("click", function (event) {
+
+    const clickedInsideMenu = navMenu.contains(event.target);
+
+    const clickedToggle = menuToggle.contains(event.target);
+
+    if (!clickedInsideMenu && !clickedToggle) {
+
+        navMenu.classList.remove("open");
+        menuToggle.classList.remove("active");
+
+        menuToggle.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+    }
+
+});
+
+
+// 6. CLOSE MENU WHEN WINDOW RESIZES TO DESKTOP
+
+window.addEventListener("resize", function () {
+
+    if (window.innerWidth > 760) {
+
+        navMenu.classList.remove("open");
+        menuToggle.classList.remove("active");
+
+        menuToggle.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+    }
+
+});
+
+
+// 7. SMOOTH SCROLL FOR INTERNAL LINKS
+
+document.querySelectorAll('a[href^="#"]').forEach(
+    function (link) {
+
+        link.addEventListener("click", function (event) {
+
+            const targetId = this.getAttribute("href");
+
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+
+                event.preventDefault();
+
+                targetElement.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+
+                history.replaceState(null, "", targetId);
+
+            }
+
+        });
+
+    }
+);
